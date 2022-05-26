@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Home from './Buyer/Home';
+import {Redirect,Route,Switch} from 'react-router-dom';
+import Header from './Buyer/Header';
+import Contact from './Buyer/Contact';
+import About from './Buyer/About';
+import Footer from './Buyer/Footer';
+import Cart from './Buyer/Cart';
+import BooksDetails from './Buyer/BooksDetails';
+import Category from './Buyer/Category';
+import OrderPage from './Buyer/OrderPage';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Header />
+   <Switch>
+       <Route exact path="/" component={Home}/>
+      <Route exact path="/order" component={OrderPage}/>
+      <Route exact path="/category" component={Category}/>
+      <Route exact path="/books/:id" component={BooksDetails}/>
+      <Route exact path="/blog" component={About} />
+      <Route exact path="/contact" component={Contact}/>
+      <Route export path="/cart" component={Cart}/>
+      <Route to={Error} component={Home}/>
+      <Redirect to ="/" />
+    </Switch>
+    <Footer />
+   </>
   );
 }
 

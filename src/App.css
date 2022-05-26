@@ -1,38 +1,662 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=IBM+Plex+Serif:wght@500&family=Poppins:wght@500&family=Raleway:wght@500&family=Tapestry&display=swap');
+
+*{
+  font-family: 'IBM Plex Serif', serif;
+}
+body{
+  background-color: #edf0f3 !important;
+
+}
+.web_name{
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: bolder;
+  text-align: center;
+  margin:0;
+  padding-top: 7px;
+  background-color: #edf0f3 !important;
+  font-size: 1.5rem;
+  padding-bottom: 7px;
+}
+.header{
+  background-color: #02052e ;
+  color: #edf0f3;
+  border-top: 2px solid #f53a0b ;
+  border-bottom: 1px solid #f53a0b ;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0 ;
+  font-family: 'IBM Plex Serif', serif;
+  line-height: 0;
+}
+.nav-link{
+  color: #edf0f3;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-link:hover{
+  color: #f53a0b;
+}
+ .nav-link:focus{
+    color: #f53a0b;
+    text-decoration: 2px underline;
+    text-underline-offset: 3px;
+    text-underline-position: under;
+}
+.posterimg{
+  width:inherit;
+  height: 350px;
+}
+.carousel-indicators button{
+  display:none;
+}
+.poster2 p{
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+.poster2 {
+  padding-top: 10px;
+  background-color:#02052e;
+  color: #ef6c00;
+}
+.poster2 h6{
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-family: 'BIZ UDPMincho', serif;
+
+}
+.poster2 span{
+  margin-top: 0;
+  font-size: 11px;
+  font-family: 'BIZ UDPMincho', serif;
+
+}
+.section-heading{
+  font-size: 24px;
+  font-weight: bolder;
+  text-decoration: #f53a0b 4px underline;
+  text-underline-position:under;
+  font-family: 'BIZ UDPMincho', serif;
+
+}
+.bookcollection{
+  border: 2px solid #02052e;
+  border-radius: 5px;
+  padding: 7px 0px;
+  
+  margin-bottom: 15px;
+  background-color: #edf0f3
+}
+.BooksNav{
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  cursor: pointer;
+  color: #02052e;
+  text-decoration: none;
+
+
+}
+.BooksNav:hover,.BooksNav:focus{
+  color: #ef6c00   ;
+  text-decoration: underline;
+
+}
+.bookcard{
+  width: 12.5rem;
+  height: 17rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  background-color: transparent !important;
+  transition:transform 0.8s;
+  transform-style: preserve-3d;
+}
+.bookcard:hover{
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.front,.back{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  backface-visibility: hidden;
+  display: table-row;
+}
+
+
+.back{
+  transform: rotateY(180deg);
+  width: 12.5rem;
+  height: 17rem;
+  background-color: #02052e;
+  margin-left: -4px;
+}
+.back h1{
+  font-size: 15px;
+  color:#f53a0b;
+  padding-top: 40px;
+  padding-left: 20px;
+  text-transform:capitalize;
+}
+.back h2{
+  font-size: 11px;
+  color:#edf0f3;
+  padding-top: 5px;
+  padding-left: 20px;
+
+}
+.card-show-more{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  border: 1px solid #f53a0b;
+  padding: 2px 14px 4px;
+
+}
+.card-show-more:hover{
+  color: red;
+  background-color:#edf0f3;
+}
+.back h3{
+  font-size: 14px;
+  color:#edf0f3;
+  padding-top: 5px;
+  padding-left: 20px;
+
+}
+.bookcard-img{
+  width: 12.5rem;
+  height: 17rem;
+  background-color: transparent !important;
+}
+.close-btn{
+  font-size: 2rem;
+  color: #f53a0b;
+  margin-right: 1rem;
+  text-align: end;
+}
+
+.form h3{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #02052e;
+  margin-bottom: 1rem;
+  font-family: 'Ibarra Real Nova', serif;
+}
+.form input{
+  display: block;
+  width: 100%;
+  margin-left: 2rem;
+  background-color: transparent;
+  margin-bottom: 5px;
+  height: 2.5rem;
+  padding-left:5px ;
+  border: 2px  solid transparent;
+  border-bottom:2px solid #2F6CE5;
+}
+
+.form .login-btn{
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  margin-left: 2rem;
+  background-color: #2F6CE5;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bolder;
+  color: #edf0f3;
+  font-size: 1.1rem;
+  border: 1px solid #02052e;
+  margin-bottom:10px;
+}
+.Link-login-btn{
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  margin-left: 2rem;
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #2F6CE5;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bolder;
+  color: #edf0f3;
+  font-size: 1.1rem;
+  border: 1px solid #02052e;
+  margin-bottom:10px;
+}
+.Link-login-btn:hover{
+  color: #02052e;
+  background-color: #edf0f3;
+}
+.form .login-btn:hover{
+  color: #02052e;
+  background-color: #edf0f3;
+}
+
+.form h6 span{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  color: #f53a0b;
+  font-size: 1.1rem;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.form .login-img{
+  margin-left: 40px !important;
+}
+
+.box a{
+  display: block;
+  margin-bottom: 10px;
+  color: #02052e  ;
+  text-decoration: none ;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+section.contact-us .map{
+  border: 2px solid #02052e;
+  height: 340px;
+}
+.contactInput{
+  width:22rem;
+  height: 2rem;
+  border: 1px solid #02052e;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px;
+}
+.contact-us{
+  display: flex;
+}
+.contactTextarea{
+  width: 22rem;
+  height: 7rem;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #02052e;
+}
+
+.box .contact-info .contactTitle{
+  font-size: 1rem;
+  font-family: "Raleway-Bold";
+  display: block;
+}
+.contact-info{
+  margin-top: -1.1rem;
+  text-align: start;
+  margin-left: 2rem;
+}
+.navy-blue-btn{
+  background-color: #02052e;
+  color: #FFFFFF;
+  border: 2px solid #02052e;
+  font-size: 14px;
+  padding: 3px 10px 3px;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+.navy-blue-btn:hover{
+  background-color: #f5f3ff ;
+  color: #02052e;
+
+}
+.about img{
+  height: 350px;
+  padding-right: 40px;
+}
+.about h4{
+  font-size: 20px;
+  font-weight: bold;
+  color:brown;
+  font-family: 'BIZ UDPMincho', serif;
+
+}
+.about p{
+  font-size: 14px;
+}
+.card{
+  transition: all 0.5s ease;
+  background-color: #edf0f3;
+  border-radius: 5px;
+  border-bottom: 10px solid #02052e !important;
+  position: relative;
+  border: 1px solid #02052e !important;
+  width: 11.5rem !important;
+  height: 18rem !important;
+}
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card-title{
+  font-size: 12px;
+  font-weight: bolder;
+  color: #02052e;
+}
+.price{
+  color: #02052e;
+  font-size: 13px !important; 
+  font-weight: bolder;
+  font-family: 'IBM Plex Serif', serif;
+  
+}
+.price span{
+  font-family: 'IBM Plex Serif', serif;
+  text-decoration:1.7px #02052e line-through;
+  color: #f53a0b;
+  font-size: 13px;
+  
+}
+.itemcategory{
+  color:#f5f3ff;
+  background-color:#f53a0b  ;
+  padding: 2px 35px 2px;
+  border:1px solid #02052e;
+  font-weight: bold;
+  margin-top: 9.1rem;
+  font-size: 11px;
+  font-family: "Raleway-Bold";
+  position:absolute;
+}
+.card-btn{
+  color: #edf0f3;
+  font-size: 10px ;
+  padding: 2px 2px 4px;
+  background-color: #02052e;
+  border: 2px solid #02052e;
+}
+.card-btn:hover{
+  color: #f53a0b;
+  background-color: transparent;
+}
+.readmore-btn{
+  color: #f5f3ff;
+  background-color: #02052e;
+  border: 2px solid #02052e;
+  font-size: 14px;
+  padding: 2px 18px 3px;
+  letter-spacing: 1px;
+}
+.readmore-btn:hover{
+  color: #02052e;
+  background-color: #edf0f3;
+}
+.card-img-top{
+  height: 10.5rem; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.itemcarousel{
+  position: relative;
+  display: none;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.slick-slider {
+  margin: 0 27px;
+}
+.slick-list {
+  margin: 0 27px;
+}
+.slick-track {
+padding: 1rem 0;
+}
+.section .slick-slider .slick-prev {
+  width: 30px;
+  top: 50%;
+  left: -2rem;
+  z-index: 0;
+  position: absolute;
+}
+.slick-slider .slick-next {
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  z-index: 0;
+
+}
+.slick-prev:before {
+  content: "￩";
+  font-size: 30px;
+  padding-bottom: 4px !important;
+  padding: 0 13px;
+  font-weight: bolder;
+  color: #f53a0b;
+  border-radius: 10px;
+  background-color: #02052e;
+}
+.slick-next:before {
+content: "￫";
+font-size: 30px;
+padding-bottom: 4px !important;
+padding: 0 13px;
+font-weight: bolder;
+color: #f53a0b;
+border-radius: 10px;
+background-color: #02052e;
+
+}
+.slick-slider{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.StarIcons{
+  font-size: 1.4rem;
+}
+.customerName{
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1.3rem;
+  color: #0510a5;
+  padding-top: 1.2rem;
+  padding-bottom: 6px;
+  text-decoration: underline;
+  text-underline-position:  under;
+}
+.ReviewParagraph{
+  font-family: 'IBM Plex Serif', serif;
+  line-height: 1.5; 
+  font-size: 14px;
+  color: #02052e;
+}
+.customeruserIcon{
+  font-size: 3rem;
+  padding: 5px 24px 20px; 
+  border-radius: 50%;   
+  background-color: #edf0f3;
+  color: #02052e;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+footer{
+  background-color: #d1d5da;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.footer{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+footer .box{
+  flex: 1;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+footer .box ul{
+  list-style-type: none;
+}
+footer .box h3{
+  border-bottom: 1px solid #02052e;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+footer .box p{
+  line-height: 1.7;
+  font-family: "Raleway-Regular";
+}
+footer .box ul li{
+  margin-bottom: 1rem;
+}
+.box .contact-info .contactTitle{
+  font-size: 1rem;
+  font-family: "Raleway-Bold";
+  display: block;
+}
+.contact-info{
+  margin-top: -1.1rem;
+  text-align: start;
+  margin-left: 2rem;
+}
+footer.copyright{
+  padding: 1rem 0;
+  background-color: #0b104e;
   color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+footer.copyright a{
+  color: #eb9532;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-family: "Raleway-Bold";
+}
+.socialAccount span{
+  font-size: 1.5rem;
+  margin:1rem;
+  cursor: pointer;
+}
+.socialAccount span:hover{
+  color:#0dd617;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.btn-back{
+  background-color: #02052e;
+  color: #f53a0b;
+  font-size: 14px;
+  padding: 7px 33px 7px;
+  border: 2px solid #f53a0b;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-back:hover{
+  background-color: #edf0f3;
+  color:#02052e;
+}
+.Books-Details img{
+  width: 45%;
+
+}
+.Books-Details h3{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: bold;
+  color: #02052e;
+}
+.Books-Details h6{
+  font-family: 'IBM Plex Serif', serif;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.Books-Details h6 span{
+  font-size: 15px;
+}
+.Books-Details h5{
+  font-family: 'IBM Plex Serif', serif;
+  text-transform: capitalize;
+  font-size: 18px;
+
+}
+.Books-Details h5 span{
+  font-size: 15px;
+}
+tr,td{
+  border-top: 1px solid #02052e;
+  border-color: #02052e;
+  border-width: 1px;
+}
+.totalPrice{
+  text-align: right;
+  font-size: 32px;
+
+}
+.totalPrice span{
+  font-size: 26px;
+}
+.table-img{
+  width: 40px;
+}
+.table-img:hover{
+  -ms-transform: scale(3.5); /* IE 9 */
+  -webkit-transform: scale(3.5); /* Safari 3-8 */
+  transform: scale(3.9); 
+}
+.orderimg{
+  width: 400px;
+  border:5px  solid #FFFFFF;
+}
+.orderpage{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #FFFFFF;
+}
+.orderpage input{
+  font-size: 12px;
+  padding: 6px 16px 6px;
+  width:300px;
+  border: 1px solid #02052e;
+  outline: none;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.orderpage h4{
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #02052e;
+  font-weight: bold;
+  text-align: center;
+}
+.orderpage input[type=text]:focus{
+  border: 2px solid #0510a5 !important;
+}
+.BooksCategory{
+  display: block !important;
+  text-decoration: none;
+  border: 1px solid #02052e;  
+  color:#02052e;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 3px 20px 3px;
+}
+.BooksCategory:hover{
+  background-color: #02052e;
+  color: #f53a0b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.BooksCategory_name{
+  font-family: 'BIZ UDPMincho', serif;
+  font-weight: bold;
+  color: #ec0c0c;
+  background-color: #0510a5;
 }

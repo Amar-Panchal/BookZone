@@ -1,0 +1,93 @@
+{
+  "signup": [
+    {
+      "Name": "amar",
+      "Email": "amar@gmail.com",
+      "password": "amar@2001",
+      "ConfirmPassword": "amar@2001",
+      "id": 1
+    },
+    {
+      "Name": "hj",
+      "Email": "uhh@fgg.ggh",
+      "password": "uhhiuhi",
+      "ConfirmPassword": "hjiiii",
+      "id": 2
+    },
+    {
+      "Name": "bbb",
+      "Email": "ggg@gg.com",
+      "password": "bbb",
+      "ConfirmPassword": "bbb",
+      "id": 3
+    },
+    {
+      "Name": "",
+      "Email": "",
+      "password": "",
+      "ConfirmPassword": "",
+      "id": 4
+    }
+  ],
+  "ContactUs": [
+    {
+      "id": 1,
+      "Name": "ABCDEF",
+      "Mobile": 123456789,
+      "Email": "ABCDEF@gmail.com",
+      "Message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "Name": "",
+      "Email": "",
+      "Mobile": "",
+      "Message": "",
+      "id": 2
+    },
+    {
+      "Name": "",
+      "Email": "",
+      "Mobile": "",
+      "Message": "",
+      "id": 3
+    }
+  ],
+  "Address": [
+    {
+      "Name": "abc",
+      "State": "Maharastra",
+      "City": "Ambajogai",
+      "Area_name": "abc nagar",
+      "Pincode": "471517",
+      "Phone_number": "1234567890",
+      "id": 1
+    },
+    {
+      "Name": "",
+      "State": "",
+      "City": "",
+      "Area_Name": "",
+      "Phone_number": "",
+      "Pincode": "",
+      "id": 2
+    },
+    {
+      "Name": "",
+      "State": "",
+      "City": "",
+      "Area_Name": "",
+      "Phone_number": "",
+      "Pincode": "",
+      "id": 3
+    },
+    {
+      "Name": "",
+      "State": "",
+      "City": "",
+      "Area_Name": "",
+      "Phone_number": "",
+      "Pincode": "",
+      "id": 4
+    }
+  ]
+}

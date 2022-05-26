@@ -42,7 +42,7 @@ function Header() {
   return (
     <>
     <div className="sticky-top">
-    <h4 className="web_name">Book Store</h4>
+    <h4 className="web_name">BookZone</h4>
     <header className="header  d-flex justify-content-center align-items-center ">
         <Link className="nav-link" to ="/" ><AiTwotoneHome />  Home</Link>
         <Link className="nav-link" to ="/category"><MdOutlineCategory />  Category</Link>

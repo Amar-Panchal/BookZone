@@ -3,11 +3,14 @@ import {AiTwotoneHome} from 'react-icons/ai'
 import { Modal } from 'react-bootstrap';
 import {AiOutlineClose} from 'react-icons/ai'
 import {FcGoogle} from 'react-icons/fc'
+import {BsCartPlusFill} from 'react-icons/bs'
 import {FaUserCircle} from 'react-icons/fa'
 import {MdOutlineCategory,MdLibraryBooks,MdContactPhone} from 'react-icons/md'
 import seller from '../Images/seller-img.jpg'
 import {  Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import {toast }from 'react-toastify'
+import { useHistory } from 'react-router-dom';
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -21,10 +24,27 @@ function Header() {
   const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [ConfirmPassword, setConfirmPassword] = useState('');
+  const history = useHistory();
 
 
   const postData=async  e=>{
     e.preventDefault();
+    if(Name === "" ){
+      return toast.error("Please Enter Your Name..!")
+    }
+    if(Email === "" ){
+      return toast.error("Please Enter Your Email..!")
+    }
+    if(password === "" ){
+      return toast.error("Please Enter Your Password..!")
+    }
+    if(ConfirmPassword === "" ){
+      return toast.error("Please Enter Your Password..!")
+    }
+    if(password != ConfirmPassword ){
+      return toast.error("Enter Same Password..!")
+    }
+    else{
     let data = {Name,Email,password,ConfirmPassword}
     let result = await fetch("http://localhost:3000/signup",{
         method:'POST',
@@ -34,9 +54,10 @@ function Header() {
         },  
         body:JSON.stringify(data)
     }).then(()=>{
-      console.log(data)
-      window.location.reload(false);
+      return toast.success("successfully logged..!")
+      history.push('/cart')
     })
+  }
   }
 
   return (
@@ -44,11 +65,11 @@ function Header() {
     <div className="sticky-top">
     <h4 className="web_name">BookZone</h4>
     <header className="header  d-flex justify-content-center align-items-center ">
-        <Link className="nav-link" to ="/" ><AiTwotoneHome />  Home</Link>
-        <Link className="nav-link" to ="/category"><MdOutlineCategory />  Category</Link>
-        <Link className="nav-link" to ="/contact"><MdContactPhone />  Contact Us</Link>
-        <Link className="nav-link navblue-color " to ="/cart">Cart [ {state.length} ]</Link>
-        <Link className="nav-link"  onClick={signInhandleShow}><FaUserCircle />  Sign In </Link>
+        <Link className="nav-link" to ="/" ><AiTwotoneHome /> <span className='headertext'>Home</span></Link>
+        <Link className="nav-link" to ="/category"><MdOutlineCategory /><span className='headertext'>  Category</span></Link>
+        <Link className="nav-link" to ="/contact"><MdContactPhone /> <span className='headertext'> Contact Us</span></Link>
+        <Link className="nav-link navblue-color " to ="/cart"><BsCartPlusFill /> <span className='headertext'>Cart [ {state.length} ]</span></Link>
+        <Link className="nav-link"  onClick={signInhandleShow}><FaUserCircle /> <span className='headertext'> Sign In</span> </Link>
     </header>
     <Modal show={signInshow} size="xl"  onHide={signInhandleClose} animation={false}>
             <span className="close-btn" onClick={signInhandleClose}><AiOutlineClose /></span>

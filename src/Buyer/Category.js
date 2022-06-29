@@ -34,7 +34,7 @@ const Category=() =>{
                 </div>
 
                 <div className="box2 d-block my-3">
-                    <Link className="BooksCategory  BooksCategory_name "onClick={()=>setBooksData(DataApi)}>All</Link>
+                    <Link className="BooksCategory  BooksCategory_name "onClick={()=>setBooksData(DataApi)}>Language</Link>
                     <Link className="BooksCategory   " onClick={()=>filterItem2("English")}>English</Link>
                     <Link className="BooksCategory  " onClick={()=>filterItem2("Marathi")}>Marathi</Link>
                     <Link className="BooksCategory  " onClick={()=>filterItem2("Hindi")}>Hindi</Link>

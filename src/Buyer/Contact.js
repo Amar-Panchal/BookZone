@@ -1,4 +1,5 @@
 import React ,{useState} from 'react';
+import {toast} from 'react-toastify';
 
 function Contact() {
     const [Name,setName] = useState('');
@@ -8,6 +9,19 @@ function Contact() {
 
     const ContactUs =async  e=>{
         e.preventDefault();
+        if(Name === "" ){
+            return toast.error("please enter your name..!")
+        }
+        if(Email === "" ){
+            return toast.error("please enter your email..!")
+        }
+        if(Mobile === "" ){
+            return toast.error("Please enter your mobile number.!")
+        }
+        if(Message === "" ){
+            return toast.error("Write Message..!")
+        }
+        else{
         let Adddata = {Name,Email,Mobile,Message}
         let result = await fetch("http://localhost:3000/ContactUs",{
             method:'POST',
@@ -20,6 +34,7 @@ function Contact() {
           window.location.reload(false);
 
         })
+    }
       }
     return (
         <>

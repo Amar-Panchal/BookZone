@@ -14,8 +14,8 @@ function Cart() {
                     <tr>
                         <td><img className="table-img" src={item.img} alt={item.name} /></td>
                         <td>{item.name}</td>
-                        <td>₹ {item.Real_Price}</td>
-                        <td>₹ {item.price} ({item.discount})</td>
+                        <td>₹ {item.Real_Price} /- </td>
+                        <td>₹ {item.price} ({item.discount}) /-</td>
                         <td><button onClick={()=>handleClose(item)} 
                         className="btn-remove" aria-label="close">Remove</button></td>
                     </tr>

@@ -22,11 +22,25 @@
       "id": 3
     },
     {
-      "Name": "",
-      "Email": "",
-      "password": "",
+      "Name": "daskj",
+      "Email": "dask@gkdf.dsf",
+      "password": "2kldf",
       "ConfirmPassword": "",
       "id": 4
+    },
+    {
+      "Name": "daskj",
+      "Email": "dask@gkdf.dsf",
+      "password": "2kldf",
+      "ConfirmPassword": "dskl",
+      "id": 5
+    },
+    {
+      "Name": "daskj",
+      "Email": "dask@gkdf.dsf",
+      "password": "abc",
+      "ConfirmPassword": "abc",
+      "id": 6
     }
   ],
   "ContactUs": [
@@ -36,139 +50,32 @@
       "Mobile": 123456789,
       "Email": "ABCDEF@gmail.com",
       "Message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-    },
-    {
-      "Name": "",
-      "Email": "",
-      "Mobile": "",
-      "Message": "",
-      "id": 2
-    },
-    {
-      "Name": "",
-      "Email": "",
-      "Mobile": "",
-      "Message": "",
-      "id": 3
     }
   ],
-  "Address": [
+  "Order": [
     {
-      "Name": "abc",
-      "State": "Maharastra",
-      "City": "Ambajogai",
-      "Area_name": "abc nagar",
-      "Pincode": "471517",
-      "Phone_number": "1234567890",
+      "FirstName": "sdkld",
+      "LastName": "dsa",
+      "Email": "dds@glfk.dkf",
+      "State": "dkadsfd",
+      "City": "kdkljd",
+      "Area_Name": "dsjjkdls",
+      "Phone_number": "dskllj",
+      "Pincode": "djksljd",
+      "productid": "2,34,4",
       "id": 1
     },
     {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
+      "FirstName": "djhjhk",
+      "LastName": "dm",
+      "Email": "dfdfm@g.cmm",
+      "State": "maharashtra",
+      "City": "pune",
+      "Area_Name": "pune",
+      "Phone_number": "9545224098",
+      "Pincode": "491517",
+      "productid": "1",
       "id": 2
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 3
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 4
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 5
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 6
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 7
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 8
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 9
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 10
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 11
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 12
-    },
-    {
-      "Name": "",
-      "State": "",
-      "City": "",
-      "Area_Name": "",
-      "Phone_number": "",
-      "Pincode": "",
-      "id": 13
     }
   ]
 }

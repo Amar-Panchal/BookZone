@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {AiTwotoneHome} from 'react-icons/ai'
 import {MdOutlineCategory,MdLibraryBooks,MdContactPhone} from 'react-icons/md'
 import { useSelector } from 'react-redux';
+import {BsCartPlusFill} from 'react-icons/bs'
 
 function Footer() {
     const state = useSelector((state) =>state.reducer)
@@ -11,7 +12,7 @@ function Footer() {
     return (
         <>
         <footer>
-        <div className=" container footer mt-4 pt-5 pb-2">
+        <div className=" container footer  pt-5 pb-2">
             <div className="box ">
                 <h3>About us</h3>
                 <p>Lorem ipsum dolor sit amet consectetur,Lorem Ipsum is simply dummy text of the printing and typesetting industry.  adipisicing elit. Aliquam est placeat blanditiis.</p>
@@ -20,11 +21,11 @@ function Footer() {
             
             <div className="box "> 
                 <h3>Quick Links</h3>
-                <div className="text-start ">
-                <Link className="nav-link" to ="/" ><AiTwotoneHome />  Home</Link>
-                <Link className="nav-link" to ="/category"><MdOutlineCategory />  Category</Link>
-                <Link className="nav-link" to ="/contact"><MdContactPhone />  Contact Us</Link>
-                <Link className="nav-link navblue-color " to ="/cart">Cart [ {state.length} ]</Link>
+                <div className="text-start  ">
+                <Link className="nav-link" to ="/" ><AiTwotoneHome /><span className='headertext'>  Home</span></Link>
+                <Link className="nav-link" to ="/category"><MdOutlineCategory /> <span className='headertext'> Category</span></Link>
+                <Link className="nav-link" to ="/contact"><MdContactPhone /><span className='headertext'>  Contact Us</span></Link>
+                <Link className="nav-link navblue-color " to ="/cart"><BsCartPlusFill /> <span className='headertext'> Cart [ {state.length} ]</span></Link>
                 </div>
             </div>
             

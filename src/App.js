@@ -3,6 +3,8 @@ import Home from './Buyer/Home';
 import {Redirect,Route,Switch} from 'react-router-dom';
 import Header from './Buyer/Header';
 import Contact from './Buyer/Contact';
+import { ToastContainer } from 'react-toastify';
+
 import About from './Buyer/About';
 import Footer from './Buyer/Footer';
 import Cart from './Buyer/Cart';
@@ -12,6 +14,7 @@ import OrderPage from './Buyer/OrderPage';
 function App() {
   return (
    <>
+   <ToastContainer />
    <Header />
    <Switch>
        <Route exact path="/" component={Home}/>

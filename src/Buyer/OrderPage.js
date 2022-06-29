@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import orderdetail from '../Images/orderdetail.jpg'
-import {useSelector} from 'react-redux';
 function OrderPage( ) {
     const [Name,setName] = useState('');
     const [State,setState] = useState('');
@@ -9,18 +9,7 @@ function OrderPage( ) {
     const [Area_Name,setArea_Name] = useState('');
     const [Phone_number,setPhone_number] = useState('');
     const [Pincode ,setPincode] = useState('');
-    var total = 0;
-    const totalprice = (item) => {
-        total = total + item.price;
-        return (
-                <>
-                <div>
-            
-                </div>
-                </>
-        );
-    }
-    const state = useSelector((state) => state.reducer)
+    const history = useHistory();
     const postAddressData=async  e=>{
         e.preventDefault();
         let Adddata = {Name,State,City,Area_Name,Phone_number,Pincode}
@@ -32,8 +21,7 @@ function OrderPage( ) {
             },  
             body:JSON.stringify(Adddata)
         }).then(()=>{
-          window.location.reload(false);
-
+          history.push('/home')
         })
       }
   return (
@@ -44,7 +32,7 @@ function OrderPage( ) {
             <img className="orderimg" src={orderdetail} alt ="" />
         </div>
         <div>
-            <h4>Add Delivery Address</h4>
+            <h4>Payment</h4>
             <input  type="text" placeholder="Full Name" value={Name} onChange={(e) =>setName(e.target.value)}/>
             <input  type="text" placeholder="State "  value={State} onChange={(e) =>setState(e.target.value)}/>
             <input type="text" placeholder ="City"  value={City} onChange={(e) =>setCity(e.target.value)}/>
@@ -52,10 +40,9 @@ function OrderPage( ) {
             <input  type="text" placeholder="Pincode"  value={Pincode} onChange={(e) =>setPincode(e.target.value)} />
             <input  type="text " placeholder="Phone Number  "  value={Phone_number} onChange={(e) =>setPhone_number(e.target.value)}/>
 
-            <Link to={`/order`} className="py-1 readmore-btn text-decoration-none " onClick={postAddressData} >Proceed Payment</Link>
+            <Link to={`/payment`} className="py-1 readmore-btn text-decoration-none " onClick={postAddressData} >Proceed Payment</Link>
         </div>
-        {state.map(totalprice)}
-        <h1>total={total}</h1>
+       
         </div>
 
     </div>

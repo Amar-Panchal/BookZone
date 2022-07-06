@@ -27,7 +27,7 @@ const Books=() =>{
 
             <BooksCard BooksData={BooksData} />
             <div className="text-center mt-3">
-            <Link to={`/category`} className=" readmore-btn text-decoration-none " >Show More</Link>
+            <Link to={`/category`} className=" navy-blue-btn text-decoration-none " >Show More</Link>
             </div>
         </>
     )

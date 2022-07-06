@@ -23,7 +23,7 @@ function Contact() {
         }
         else{
         let Adddata = {Name,Email,Mobile,Message}
-        let result = await fetch("http://localhost:3000/ContactUs",{
+        let result = await fetch("https://book-c6820-default-rtdb.firebaseio.com/ContactUs.json",{
             method:'POST',
             headers:{
                 "Content-Type":"application/json",

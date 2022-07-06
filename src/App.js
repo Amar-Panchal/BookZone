@@ -14,6 +14,8 @@ import OrderPage from './Buyer/OrderPage';
 function App() {
   return (
    <>
+  {/* json-server --watch db.json */}
+
    <ToastContainer />
    <Header />
    <Switch>

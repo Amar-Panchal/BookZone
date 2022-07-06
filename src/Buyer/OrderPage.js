@@ -7,11 +7,17 @@ import {MdMenuBook,MdOutlineDeliveryDining} from 'react-icons/md'
 import { useSelector } from 'react-redux';
 import { Accordion } from 'react-bootstrap';
 import {toast} from 'react-toastify';
+import { Modal } from 'react-bootstrap';
+import {IoQrCodeSharp} from 'react-icons/io5';
+import {AiOutlineClose} from 'react-icons/ai';
+import Payment_QR from '../Images/Payment_QR.jpg';
+
 
 function OrderPage( ) {
     const [LastName,setLastName] = useState('');
     const [FirstName,setFirstName] = useState('');
     const [Email,setEmail] = useState('');
+    const [google_url,setgoogle_url] = useState('');
     const [productid,setproductid] = useState('');
     const [State,setState] = useState('');
     const [City,setCity] = useState('');
@@ -20,6 +26,63 @@ function OrderPage( ) {
     const [Pincode ,setPincode] = useState('');
     const history = useHistory();
 
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+            
+    
+    const QRpostAddressData=async  e=>{
+        e.preventDefault();
+        if(FirstName === ""|| LastName === "" ){
+            
+            return toast.error("Please fill your Name..!")
+        }
+        if(Email === ""){
+            return toast.error("Please fill your Email..!")
+        }
+        if(State=== "" ){
+            return toast.error("Please fill  State..!")
+        }
+        if(City === "" ){
+            return toast.error("Please fill  City..!")
+        }
+        if(Area_Name === "" ){
+            return toast.error("Please fill Address..!")
+        }
+        if(Phone_number === "" ){
+            return toast.error("Please fill your Mobile Number..!")
+        }
+        if(Pincode === "" ){
+            return toast.error("Please fill your Pincode..!")
+        }
+        if(productid === "" ){
+            return toast.error("Please fill your Product Id..!")
+        }
+        if(google_url === "" ){
+            return toast.error("Please fill your google_url Id..!")
+        }
+        else{
+        let Adddata = {FirstName,LastName,Email,State,City,Area_Name,Phone_number,Pincode,productid ,google_url}
+        let result = await fetch("https://book-c6820-default-rtdb.firebaseio.com/Order.json",{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json",
+                "Accept":"application/json"
+            },  
+            body:JSON.stringify(Adddata)
+        }).then(()=>{
+            
+          history.push('/home')
+
+          return toast.success("successfully order placed..!")
+
+        })
+        
+
+        }
+      }
+
+    
     const postAddressData=async  e=>{
         e.preventDefault();
         if(FirstName === ""|| LastName === "" ){
@@ -47,9 +110,10 @@ function OrderPage( ) {
         if(productid === "" ){
             return toast.error("Please fill your Product Id..!")
         }
+        
         else{
         let Adddata = {FirstName,LastName,Email,State,City,Area_Name,Phone_number,Pincode,productid}
-        let result = await fetch("http://localhost:3000/Order",{
+        let result = await fetch("https://book-c6820-default-rtdb.firebaseio.com/Order.json",{
             method:'POST',
             headers:{
                 "Content-Type":"application/json",
@@ -63,6 +127,8 @@ function OrderPage( ) {
           return toast.success("successfully order placed..!")
 
         })
+        
+
         }
       }
       const state = useSelector((state) => state.reducer) //ItemAddReducer is fileName
@@ -135,7 +201,7 @@ function OrderPage( ) {
             <div className='row1 row3'>
             <Accordion.Header>
                 <div className='d-flex align-items-center'>
-                <span><MdDeliveryDining/></span>
+                <span className='qr-code-icon'><MdDeliveryDining/></span>
                 <p>Cash On Delivery</p>
                 </div>
             </Accordion.Header>
@@ -143,7 +209,7 @@ function OrderPage( ) {
                 <div className='d-block'>
                      {state.map(itemList)}
                      <div className='d-flex justify-content-between align-items-center'>
-                     <h3 className='delivery fw-bold'><span><MdOutlineDeliveryDining/></span>delivery charge</h3>
+                     <h3 className='delivery fw-bold'><span className='qr-code-icon'><MdOutlineDeliveryDining/></span>delivery charge</h3>
                      <h3 className='pt-2 fw-bold'> ₹ +50 /-</h3>
                      </div>
                      <h3 className='total'> Total : ₹ {total} /-</h3>
@@ -159,10 +225,60 @@ function OrderPage( ) {
             </div>
             </Accordion.Item>
 
+
             <Accordion.Item eventKey="1">
+
+            <div className='row1 row3'>
+            <Accordion.Header>
+                <div className='d-flex align-items-center'>
+                <span className='qr-code-icon'><IoQrCodeSharp/></span>
+                <p>QR Payment</p>
+                </div>
+            </Accordion.Header>
+            <Accordion.Body>
+                <div className='d-block'>
+                     {state.map(itemList)}
+                     <div className='d-flex justify-content-between align-items-center'>
+                     <h3 className='delivery fw-bold'><span className='qr-code-icon'><MdOutlineDeliveryDining/></span>delivery charge</h3>
+                     <h3 className='pt-2 fw-bold'> ₹ +50 /-</h3>
+                     </div>
+                     <h3 className='total'> Total : ₹ {total} /-</h3>
+                </div>
+                <div className='mt-3 text-center'>
+                <div className='d-flex productidinput my-3 justify-content-center align-items-center'>
+                    <h4>please enter Book ids : </h4>
+                    <input type="text"  placeholder ="eg. 3,4,3,54,33"  value={productid} onChange={(e) =>setproductid(e.target.value)} required/>
+                </div> 
+            
+                <button className=" QR-btn text-decoration-none " onClick={handleShow}><span className='icon-qr'><IoQrCodeSharp/></span> QR CODE</button>
+                <div className='d-flex productidinput my-3 justify-content-center align-items-center'>
+                    <h4>Paste Google Drive Url : </h4>
+                    <input type="url" placeholder='Google Url'   value={google_url} onChange={(e) =>setgoogle_url(e.target.value)} />
+                </div> 
+
+
+                <Link to={`/payment`} className=" Procced-btn text-decoration-none " onClick={QRpostAddressData} >Proceed Payment</Link>
+
+
+                <Modal show={show} size="lg"  onHide={handleClose} animation={false}>
+                <span className="close-btn" onClick={handleClose}><AiOutlineClose /></span>
+                <Modal.Body>
+                    <div className=' qr-code text-center pb-5'>
+                        <h3>QR CODE</h3>
+                        <img className='qr-code-img' src={Payment_QR} alt="Qr Code" />
+                    </div>
+            
+                    </Modal.Body>
+                </Modal>
+                </div>
+            </Accordion.Body>
+            </div>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="2">
             <Accordion.Header>
             <div className='row1 d-flex align-items-center'>
-                <span><FaRegCreditCard/></span>
+                <span className='qr-code-icon'><FaRegCreditCard/></span>
                 <p>Debit Card</p>
             </div>
             </Accordion.Header>
@@ -171,10 +287,10 @@ function OrderPage( ) {
             </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="2">
+            <Accordion.Item eventKey="3">
             <Accordion.Header>
             <div className='row1 d-flex align-items-center'>
-                <span><FaRegCreditCard/></span>
+                <span className='qr-code-icon'><FaRegCreditCard/></span>
                 <p>Credit Card</p>
             </div>
             </Accordion.Header>
@@ -196,4 +312,4 @@ function OrderPage( ) {
     )
 }
 
-export default OrderPage
+export default OrderPage;

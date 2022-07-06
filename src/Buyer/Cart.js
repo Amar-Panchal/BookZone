@@ -67,7 +67,7 @@ function Cart() {
             </table>
             <h2 className="totalPrice"><span>Total :</span> ₹ {total}</h2>
             <div className="text-center">
-            <Link to={`/order`} className=" readmore-btn text-decoration-none " >Continue Order</Link>
+            <Link to={`/order`} className=" navy-blue-btn text-decoration-none " >Continue Order</Link>
             </div>
         </div>
         </div>

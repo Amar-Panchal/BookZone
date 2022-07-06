@@ -24,7 +24,7 @@ const Category=() =>{
         <>
         <div>
             <h4 className="section-heading text-center pt-4">Books</h4>
-            <div className="container d-flex">
+            <div className="Category container d-flex">
                 <div>
                 <div className="box1 d-block my-4">
                     <Link className="BooksCategory  BooksCategory_name"onClick={()=>setBooksData(DataApi)}>Category</Link>

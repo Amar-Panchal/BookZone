@@ -7,7 +7,6 @@ body{
   background-color: #edf0f3 ;
 
 }
-
 .web_name{
   font-family: 'IBM Plex Serif', serif;
   font-weight: bolder;
@@ -19,11 +18,12 @@ body{
   padding-bottom: 7px;
 }
 .header{
-  background-color: #000033;
+  background-color: #02052e ;
   color: #edf0f3;
+  border-top: 2px solid #f53a0b ;
+  border-bottom: 1px solid #f53a0b ;
   padding-top: 2px;
   padding-bottom: 2px;
-  border-bottom: 1px solid #960707;
   margin: 0 ;
   font-family: 'IBM Plex Serif', serif;
   line-height: 0;
@@ -44,10 +44,10 @@ body{
   text-decoration: none;
 }
 .nav-link:hover{
-  color: #E04D01;
+  color: #f53a0b;
 }
 .nav-link:focus{
-    color: #E04D01;
+    color: #f53a0b;
     text-decoration: 2px underline;
     text-underline-offset: 3px;
     text-underline-position: under;
@@ -65,8 +65,8 @@ body{
 }
 .poster2 {
   padding-top: 10px;
-  background-color:#000033;
-  color: #E04D01;
+  background-color:#02052e;
+  color: #ef6c00;
 }
 .poster2 h6{
   margin-bottom: 0;
@@ -85,34 +85,31 @@ body{
 .section-heading{
   font-size: 24px;
   font-weight: bolder;
-  text-decoration: #E04D01 4px underline;
+  text-decoration: #f53a0b 4px underline;
   text-underline-position:under;
   font-family: 'BIZ UDPMincho', serif;
 
 }
 .bookcollection{
-  border: 2px solid #000033
-;
+  border: 2px solid #02052e;
   border-radius: 5px;
   padding: 7px 0px;
   
   margin-bottom: 15px;
   background-color: #edf0f3
 }
-
 .BooksNav{
   font-size: 16px;
   font-weight: 600;
   font-family: Georgia, Times, 'Times New Roman', serif;
   cursor: pointer;
-  color: #000033
-;
+  color: #02052e;
   text-decoration: none;
 
 
 }
 .BooksNav:hover,.BooksNav:focus{
-  color: #E04D01   ;
+  color: #ef6c00   ;
   text-decoration: underline;
 
 }
@@ -144,13 +141,12 @@ body{
   transform: rotateY(180deg);
   width: 12.5rem;
   height: 17rem;
-  background-color: #000033
-;
+  background-color: #02052e;
   margin-left: -4px;
 }
 .back h1{
   font-size: 15px;
-  color:#E04D01;
+  color:#f53a0b;
   padding-top: 40px;
   padding-left: 20px;
   text-transform:capitalize;
@@ -166,7 +162,7 @@ body{
   text-decoration: none;
   color: white;
   font-size: 12px;
-  border: 1px solid #E04D01;
+  border: 1px solid #f53a0b;
   padding: 2px 14px 4px;
 
 }
@@ -188,7 +184,7 @@ body{
 }
 .close-btn{
   font-size: 2rem;
-  color: #E04D01;
+  color: #f53a0b;
   margin-right: 1rem;
   text-align: end;
 }
@@ -197,8 +193,7 @@ body{
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
-  color: #000033
-;
+  color: #02052e;
   margin-bottom: 1rem;
   font-family: 'Ibarra Real Nova', serif;
 }
@@ -224,8 +219,7 @@ body{
   font-weight: bolder;
   color: #edf0f3;
   font-size: 1.1rem;
-  border: 1px solid #000033
-;
+  border: 1px solid #02052e;
   margin-bottom:10px;
 }
 .Link-login-btn{
@@ -241,25 +235,22 @@ body{
   font-weight: bolder;
   color: #edf0f3;
   font-size: 1.1rem;
-  border: 1px solid #000033
-;
+  border: 1px solid #02052e;
   margin-bottom:10px;
 }
 .Link-login-btn:hover{
-  color: #000033
-;
+  color: #02052e;
   background-color: #edf0f3;
 }
 .form .login-btn:hover{
-  color: #000033
-;
+  color: #02052e;
   background-color: #edf0f3;
 }
 
 .form h6 span{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bolder;
-  color: #E04D01;
+  color: #f53a0b;
   font-size: 1.1rem;
   margin-left: 5px;
   cursor: pointer;
@@ -271,8 +262,7 @@ body{
 .box a{
   display: block;
   margin-bottom: 10px;
-  color: #000033
-  ;
+  color: #02052e  ;
   text-decoration: none ;
   font-size: 15px;
   font-weight: 700;
@@ -280,15 +270,13 @@ body{
 
 
 section.contact-us .map{
-  border: 2px solid #000033
-;
+  border: 2px solid #02052e;
   height: 340px;
 }
 .contactInput{
   width:22rem;
   height: 2rem;
-  border: 1px solid #000033
-;
+  border: 1px solid #02052e;
   border-radius: 4px;
   font-size: 14px;
   padding: 10px;
@@ -302,8 +290,7 @@ section.contact-us .map{
   font-size: 14px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #000033
-;
+  border: 1px solid #02052e;
 }
 
 .box .contact-info .contactTitle{
@@ -317,22 +304,18 @@ section.contact-us .map{
   margin-left: 2rem;
 }
 .navy-blue-btn{
-  background-color: #000033
-;
+  background-color: #02052e;
   color: #FFFFFF;
-  border: 2px solid #000033
-;
-  font-size: 13px;
-  padding: 3px 20px 4px ;
-  border-radius: 3px;
-  font-weight: 500;
+  border: 2px solid #02052e;
+  font-size: 14px;
+  padding: 3px 10px 3px;
+  border-radius: 5px;
+  margin-top: 5px;
   text-decoration: none;
 }
 .navy-blue-btn:hover{
   background-color: #f5f3ff ;
-  color: #000033
-;
-  font-weight: 600;
+  color: #02052e;
 
 }
 .about img{
@@ -353,11 +336,9 @@ section.contact-us .map{
   transition: all 0.5s ease;
   background-color: #edf0f3;
   border-radius: 5px;
-  border-bottom: 10px solid #000033
- !important;
+  border-bottom: 10px solid #02052e !important;
   position: relative;
-  border: 1px solid #000033
- !important;
+  border: 1px solid #02052e !important;
   width: 11.5rem !important;
   height: 18rem !important;
 }
@@ -368,12 +349,10 @@ section.contact-us .map{
 .card-title{
   font-size: 12px;
   font-weight: bolder;
-  color: #000033
-;
+  color: #02052e;
 }
 .price{
-  color: #000033
-;
+  color: #02052e;
   font-size: 13px !important; 
   font-weight: bolder;
   font-family: 'IBM Plex Serif', serif;
@@ -381,18 +360,16 @@ section.contact-us .map{
 }
 .price span{
   font-family: 'IBM Plex Serif', serif;
-  text-decoration:1.7px #000033
- line-through;
-  color: #E04D01;
+  text-decoration:1.7px #02052e line-through;
+  color: #f53a0b;
   font-size: 13px;
   
 }
 .itemcategory{
   color:#f5f3ff;
-  background-color:#E04D01  ;
+  background-color:#f53a0b  ;
   padding: 2px 35px 2px;
-  border:1px solid #000033
-;
+  border:1px solid #02052e;
   font-weight: bold;
   margin-top: 9.1rem;
   font-size: 11px;
@@ -403,27 +380,24 @@ section.contact-us .map{
   color: #edf0f3;
   font-size: 10px ;
   padding: 2px 2px 4px;
-  background-color: #000033
-;
-  border: 2px solid #000033
-;
-}
-.btn-remove{
-  padding: 3px 14px 3px ;
-  font-size: 13px;
-  background-color: #E04D01;
-  border: 2px solid #000033
-;
-  color: #edf0f3;
-}
-.btn-remove:hover{
-  background-color: #edf0f3;
-  color: #000033
-;
+  background-color: #02052e;
+  border: 2px solid #02052e;
 }
 .card-btn:hover{
-  color: #E04D01;
+  color: #f53a0b;
   background-color: transparent;
+}
+.readmore-btn{
+  color: #f5f3ff;
+  background-color: #02052e;
+  border: 2px solid #02052e;
+  font-size: 14px;
+  padding: 2px 18px 3px;
+  letter-spacing: 1px;
+}
+.readmore-btn:hover{
+  color: #02052e;
+  background-color: #edf0f3;
 }
 .card-img-top{
   height: 10.5rem; 
@@ -468,10 +442,9 @@ padding: 1rem 0;
   padding-bottom: 4px !important;
   padding: 0 13px;
   font-weight: bolder;
-  color: #E04D01;
+  color: #f53a0b;
   border-radius: 10px;
-  background-color: #000033
-;
+  background-color: #02052e;
 }
 .slick-next:before {
 content: "￫";
@@ -479,10 +452,9 @@ font-size: 30px;
 padding-bottom: 4px !important;
 padding: 0 13px;
 font-weight: bolder;
-color: #E04D01;
+color: #f53a0b;
 border-radius: 10px;
-background-color: #000033
-;
+background-color: #02052e;
 
 }
 .slick-slider{
@@ -505,16 +477,14 @@ background-color: #000033
   font-family: 'IBM Plex Serif', serif;
   line-height: 1.5; 
   font-size: 14px;
-  color: #000033
-;
+  color: #02052e;
 }
 .customeruserIcon{
   font-size: 3rem;
   padding: 5px 24px 20px; 
   border-radius: 50%;   
   background-color: #edf0f3;
-  color: #000033
-;
+  color: #02052e;
 }
 
 footer{
@@ -534,8 +504,7 @@ footer .box ul{
   list-style-type: none;
 }
 footer .box h3{
-  border-bottom: 1px solid #000033
-;
+  border-bottom: 1px solid #02052e;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
@@ -565,7 +534,7 @@ footer.copyright{
   font-size: 1rem;
 }
 footer.copyright a{
-  color: #E04D01  ;
+  color: #eb9532;
   font-size: 1rem;
   letter-spacing: 1px;
   text-decoration: none;
@@ -582,19 +551,17 @@ footer.copyright a{
 }
 
 .btn-back{
-  background-color: #000033
-;
-  color: #E04D01;
+  background-color: #02052e;
+  color: #f53a0b;
   font-size: 14px;
   padding: 7px 33px 7px;
-  border: 2px solid #E04D01;
+  border: 2px solid #f53a0b;
   text-decoration: none;
   font-weight: bold;
 }
 .btn-back:hover{
   background-color: #edf0f3;
-  color:#000033
-;
+  color:#02052e;
 }
 .Books-Details img{
   width: 45%;
@@ -605,8 +572,7 @@ footer.copyright a{
   text-transform: capitalize;
   font-size: 30px;
   font-weight: bold;
-  color: #000033
-;
+  color: #02052e;
 }
 .Books-Details h6{
   font-family: 'IBM Plex Serif', serif;
@@ -626,10 +592,8 @@ footer.copyright a{
   font-size: 15px;
 }
 tr,td{
-  border-top: 1px solid #000033
-;
-  border-color: #000033
-;
+  border-top: 1px solid #02052e;
+  border-color: #02052e;
   border-width: 1px;
 }
 .totalPrice{
@@ -664,35 +628,33 @@ tr,td{
 .Payment .row1{
   width: 400px;
 }
-.Payment .qr-code-icon{
+.Payment span{
   font-size: 24px !important;
   padding: 0px 20px 0px ;
-  color: #E04D01;
+  color: #ef6c00;
   
 }
 .Payment .debit_not_available{
   font-size: 10px !important;
   margin: 0 !important;
-  color: #E04D01;
+  color: #de3112;
 }
 .Payment p{
-  font-size: 13px;
+  font-size: 14px;
   align-self: center;
   margin: 0;
-  color: #000033
-;
+  color: #02052e;
   font-weight: bold;
 }
 .orderpage span{
   font-size: 12px;
   padding-left: 3px;
   font-weight:600;
-  color: #960707 !important;
   margin-bottom: 5px;
 }
 .orderpage h5{
   font-size: 11px;
-  color: #e30a0a;
+  color: #de3112;
 }
 .orderpage input{
   font-size: 12px;
@@ -708,8 +670,7 @@ tr,td{
 .orderpage h4{
   font-size: 20px;
 
-  color: #000033
-;
+  color: #02052e;
   font-weight: bold;
   text-align: center;
 }
@@ -720,8 +681,7 @@ tr,td{
   font-size: 13px;
   color: white;
   border: 2px solid #04051d !important;
-  background-color: #000033
-;
+  background-color: #02052e;
   padding: 4px 10px 5px;
   border-radius: 3px;
   
@@ -737,29 +697,23 @@ tr,td{
 .BooksCategory{
   display: block !important;
   text-decoration: none;
-  color:#000033;
+  color:#02052e;
   padding: 3px 8px 3px;
   background-color: #FFFFFF;
   font-size: 13px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
-.BooksCategory:focus{
+.BooksCategory:hover,.BooksCategory:focus{
   background-color: #0c1139;
   color: #edf0f3;
 }
-.BooksCategory:hover{
-  color: #e30a0a;
-}
+
 .BooksCategory_name{
   font-family: 'BIZ UDPMincho', serif;
   font-weight: bold;
-  color: #edf0f3;
-  background-color:#e30a0a;
-}
-.BooksCategory_name:hover,.BooksCategory_name:focus{
+  color: #ec0c0c;
   background-color: #0510a5;
-  color: #e30a0a;
 }
 .cash_on_delivery h3{
   font-size: 12px;
@@ -767,7 +721,7 @@ tr,td{
 }
 .cash_on_delivery h4{
   font-size: 23px;
-  color: #E04D01;
+  color: #ef6c00;
 }
 .Payment .total{
   font-size: 16px;
@@ -780,14 +734,13 @@ tr,td{
 }
 
 .Payment .delivery span{
-  color:#0dd617 !important;
+  color:#0dd617;
   font-weight: bold;
   padding-left: 0 !important;
 }
 .accordion-header{
   width:400px !important;
-  border: 2px solid #000033
-;
+  border: 2px solid #02052e;
   margin-bottom: 10px;
   
 }
@@ -806,24 +759,20 @@ tr,td{
   border:none;
 }
 .accordion-header:hover,  .accordion-header:focus{
-  border: 2px solid #000033
-;
+  border: 2px solid #02052e;
   background-color: transparent !important;
   color: white !important;
-  background-color: #000033
-;
+  background-color: #02052e;
 
 }
 
 .accordion-button:not(.collapsed){
-  color: #000033
- ;
+  color: #02052e ;
   background-color: #ffffff;
 
 }
 .accordion-button:focus{
-  border-color: #000033
- !important;
+  border-color: #02052e !important;
   box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0) !important;
 }
 .accordion-button{
@@ -839,33 +788,4 @@ tr,td{
 .productidinput h4{
   font-size: 14px;
   margin-right: 10px;
-}
-.Category .box1, .Category .box2{
-  border: 1px solid #e30a0a;
-}
-.qr-code-img{
-  width: 230px;
-  height: 230px;
-}
-.qr-code h3{
-  font-size: 26px;
-  margin-bottom: 26px;
-}
-.QR-btn{
-  width: 100%;
-  color: #960707;
-  font-size: 12px;
-  padding: 4px 14px 6px;
-  letter-spacing: 1px;
-  font-weight: bolder;
-  font-family: 'BIZ UDPMincho', serif;
-  background-color: #edf0f3;
-  border: 2px solid #04051d;
-}
-.QR-btn:hover{
-  color: #edf0f3;
-  background-color: #000033;
-}
-.icon-qr{
-  font-size: 17px !important;
 }

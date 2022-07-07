@@ -44,9 +44,9 @@ function BooksDetails() {
                 <h6><span>Author :</span> {book.Author} </h6>
                 <h6><span>Language :</span> {book.Language} </h6>
                 <h5><span>Real Price: </span>₹ {book.Real_Price}</h5>
-                <h5 className='mb-3'><span>Discounted Price: </span>₹ {book.price} <span>(Discount:  {book.discount})</span></h5>
+                <h5><span>Discounted Price: </span>₹ {book.price} <span>(Discount:  {book.discount})</span></h5>
                 <Link onClick={()=>handleCart(book)} to={`/cart`}
-                className="navy-blue-btn ">{cartBtn}</Link>
+                className="navy-blue-btn readmore-btn my-2">{cartBtn}</Link>
 
             </div>
         </div>
